@@ -1,0 +1,4 @@
+- !policy
+  id: prod
+  owner: !group /operations-admin
+

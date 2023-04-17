@@ -1,0 +1,9 @@
+# Create a hello world secret
+- &secret_variables
+  - !variable secret_message
+# Now, create a secret group and permission
+- !group jenkins-only
+- !permit
+  resource: *secret_variables
+  privileges: [ read, execute ]
+  roles: !group jenkins-only

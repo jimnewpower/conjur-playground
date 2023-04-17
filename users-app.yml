@@ -1,0 +1,15 @@
+- !policy
+  id: users-app
+  body:
+    - &variables
+      - !variable db-username
+      - !variable db-password
+
+    - !group secrets-users
+
+    # secrets-users can read and execute
+    - !permit
+      resource: *variables
+      privileges: [ read, execute ]
+      role: !group secrets-users
+

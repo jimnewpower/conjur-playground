@@ -1,0 +1,4 @@
+- !policy
+  id: ci
+  owner: !group /operations-admin
+
